@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using Notifier.Pages;
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.IO;
@@ -15,6 +16,9 @@ namespace DealershipApp
                 driver.Manage().Window.Maximize();
                 driver.Navigate().GoToUrl("https://www.otomoto.pl/maszyny-budowlane/caterpillar/?search%5Bfilter_float_price%3Ato%5D=55000&search%5Bfilter_float_year%3Ato%5D=2015&search%5Border%5D=created_at_first%3Adesc&search%5Bcountry%5D=");
                 Thread.Sleep(5000);
+
+                var list = new otomotoMainPage(driver).GetCurrentPageArticles();
+
                 driver.Navigate().Refresh();
             }
             Console.ReadKey();
