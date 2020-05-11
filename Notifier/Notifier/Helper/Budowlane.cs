@@ -7,7 +7,7 @@ using System.Threading;
 
 namespace DealershipApp
 {
-    class Program
+    public class Budowlane
     {
         static void Main(string[] args)
         {
@@ -19,7 +19,7 @@ namespace DealershipApp
 
                 var list = new otomotoMainPage(driver).GetCurrentPageArticles();
 
-                driver.Navigate().Refresh();
+                //driver.Navigate().Refresh();
             }
             Console.ReadKey();
         }
