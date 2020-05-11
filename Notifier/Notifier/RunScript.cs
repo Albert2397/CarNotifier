@@ -5,8 +5,11 @@ using System.Text;
 
 namespace Notifier
 {
-    public class RunScript: ChromeDriver
+    public class RunScript
     {
-        
+        public static void Main(string[] args)
+        {
+            SetUp.StartTimeInterval();
+        }
     }
 }
