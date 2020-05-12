@@ -17,7 +17,7 @@ namespace Notifier
             SetStartData();
             // Create a timer and set a 5 minute interval.
             aTimer = new System.Timers.Timer();
-            aTimer.Interval = 1000;
+            aTimer.Interval = 60000;
             //aTimer.Interval = 300000;
 
             // Hook up the Elapsed event for the timer. 
